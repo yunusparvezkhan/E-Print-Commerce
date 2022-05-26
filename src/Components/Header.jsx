@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Search } from '@mui/icons-material'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LanguageIcon from '@mui/icons-material/Language';
-// import "./Header.css"
+import { Badge } from '@mui/material';
 
 const Container = styled.div`
-    background-color : transparent;
-    height : 50px;
-    color : #2e2e2e;
+    background-color : #3e3e3e;
+    color : #fcfcfc;
     font-family: 'roboto', sans-serif;
 `
 
@@ -44,6 +43,7 @@ const LocationBtn = styled.button`
     border:none;
     margin-left:10px;
     cursor:pointer;
+    color:#fcfcfc;
 `
 
 
@@ -57,6 +57,7 @@ const SearchContainer = styled.div`
     right:100px;
     margin-right:50px;
     cursor:pointer;
+    background-color: #fcfcfc;
 `
 
 const Input = styled.input`
@@ -64,6 +65,7 @@ const Input = styled.input`
     background-color:transparent;
     outline:none;
     height:100%;
+    color:#2e2e2e;
 `
 
 const Logo = styled.h1`
@@ -111,11 +113,13 @@ const Header = () => {
 
                     <MenuItem>
                         <SearchContainer>
-                            <Input placeholder='Search' />
-                            <Search />
+                            <Input id="Input" placeholder='Search' />
+                            <Search style={{ color: "#2e2e2e" }} />
                         </SearchContainer>
                         <CartIcon>
-                            <ShoppingCartOutlinedIcon />
+                            <Badge badgeContent={2} color="primary" >
+                                <ShoppingCartOutlined />
+                            </Badge>
                         </CartIcon>
                         <AccIcon>
                             <AccountCircleOutlinedIcon />
