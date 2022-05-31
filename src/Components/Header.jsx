@@ -5,15 +5,25 @@ import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import LanguageIcon from '@mui/icons-material/Language';
 import { Badge } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+
+const HeaderDiv = styled.div`
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color : transparent;
+
+`
 
 const Container = styled.div`
-    background-color : #3e3e3e;
     color : #fcfcfc;
     font-family: 'roboto', sans-serif;
+    position: relative;
 `
 
 const Wrapper = styled.div`
-    padding : 10px 20px;
+    padding : 10px 10px;
     display : flex;
     align-items:center;
 `
@@ -24,10 +34,10 @@ const Left = styled.div`
     align-items:center; 
 `
 const Center = styled.div`
-    flex:1
+    flex:1;
 `
 const Right = styled.div`
-    flex:1
+    flex:1;
 `
 
 const Location = styled.span`
@@ -54,7 +64,7 @@ const SearchContainer = styled.div`
     margin-left:25px;
     padding: 5px;
     position:absolute;
-    right:100px;
+    right:90px;
     margin-right:50px;
     cursor:pointer;
     background-color: #fcfcfc;
@@ -69,11 +79,12 @@ const Input = styled.input`
 `
 
 const Logo = styled.h1`
-    font-family : 'Roboto Slab', serif;
+    font-family : 'Montserrat', sans-serif;
     font-weight : normal;
     text-align : center;
     width:100%;
     cursor:pointer;
+    letter-spacing: 5px;
 `
 
 const MenuItem = styled.div`
@@ -86,12 +97,12 @@ const AccIcon = styled.div`
     position : absolute;
     right : 0;
     cursor:pointer;
-    margin-right: 50px;
+    margin-right: 40px;
 `
 
 const CartIcon = styled.div`
     position : absolute;
-    right:50px;
+    right:40px;
     cursor:pointer;
     margin-right:50px;
 `
@@ -100,35 +111,38 @@ const CartIcon = styled.div`
 
 const Header = () => {
     return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    <Location>
-                        <LanguageIcon />
-                        <LocationBtn> Kolkata (WB) </LocationBtn>
-                    </Location>
-                </Left>
-                <Center><Logo>MiBin Print</Logo></Center>
-                <Right>
+        <HeaderDiv>
+            <Container>
+                <Wrapper>
+                    <Left>
+                        <Location>
+                            <MenuIcon />
+                            <LanguageIcon style={{ marginLeft: "15px" }} />
+                            <LocationBtn> Kolkata (WB) </LocationBtn>
+                        </Location>
+                    </Left>
+                    <Center><Logo>MiBin Print</Logo></Center>
+                    <Right>
 
-                    <MenuItem>
-                        <SearchContainer>
-                            <Input id="Input" placeholder='Search' />
-                            <Search style={{ color: "#2e2e2e" }} />
-                        </SearchContainer>
-                        <CartIcon>
-                            <Badge badgeContent={2} color="primary" >
-                                <ShoppingCartOutlined />
-                            </Badge>
-                        </CartIcon>
-                        <AccIcon>
-                            <AccountCircleOutlinedIcon />
-                        </AccIcon>
-                    </MenuItem>
-                </Right>
-            </Wrapper>
+                        <MenuItem>
+                            <SearchContainer>
+                                <Input id="Input" placeholder='Search' />
+                                <Search style={{ color: "#2e2e2e" }} />
+                            </SearchContainer>
+                            <CartIcon>
+                                <Badge badgeContent={2} color="primary" >
+                                    <ShoppingCartOutlined />
+                                </Badge>
+                            </CartIcon>
+                            <AccIcon>
+                                <AccountCircleOutlinedIcon />
+                            </AccIcon>
+                        </MenuItem>
+                    </Right>
+                </Wrapper>
 
-        </Container>
+            </Container>
+        </HeaderDiv>
     )
 }
 
