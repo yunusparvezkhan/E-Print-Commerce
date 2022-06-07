@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { ArrowForwardRounded } from '@mui/icons-material';
 import { ImageData } from "./ImageData";
+import "./Banner.css"
 
 const Container = styled.div`
     width: 100%;
     height: 40vh;
-    background-color: gray;
     position : absolute;
     top:0;
     left:0;
@@ -38,12 +38,14 @@ const Arrow = styled.div`
     justify-content: center;
     left: ${props => props.direction === "left" && "30px"};
     right: ${props => props.direction === "right" && "30px"};
+    cursor:pointer;
 `
 
 
-const Banner = ({ slides }) => {
+const Banner = ({ slides, bgclr }) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
+    const bgcolor = slides.bgclor;
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -53,17 +55,18 @@ const Banner = ({ slides }) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    console.log(current)
+
 
     return (
-        <Container>
-            {/* <img src="https://images.pexels.com/photos/8106782/pexels-photo-8106782.jpeg?cs=srgb&dl=pexels-karolina-grabowska-8106782.jpg&fm=jpg" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+        <Container  >
             <ImageContainer>
                 {ImageData.map((slide, index) => {
                     return (
                         <div className={index === current ? 'slide active' : 'slide'} key={index} >
                             {index === current && (
-                                <img src={slide.image} alt="fashion image" style={{ width: "100%", height: "40vh", objectFit: "cover" }} />
+                                <div style={{ backgroundColor: slide.bgclor }} >
+                                    <img src={slide.image} alt="fashion image" style={{ width: "100%", height: "40vh", objectFit: "contain" }} />
+                                </div>
                             )}
 
                         </div>

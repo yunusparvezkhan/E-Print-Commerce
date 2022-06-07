@@ -7,7 +7,7 @@ import { ImageData } from '../Components/ImageData';
 const Home = () => {
     return (
         <div>
-            <Banner slides={ImageData} />
+            <Banner slides={ImageData} bgclr={"#000"} />
             <Header />
 
         </div>
