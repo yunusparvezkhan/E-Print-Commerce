@@ -1,13 +1,15 @@
 import React from 'react'
 import Header from '../Components/Header';
 import Banner from '../Components/Banner';
-import { ImageData } from '../Components/ImageData';
-
+import PrintableMerchSec from '../Components/PrintableMerchSec';
+import { ImageData } from '../Components/SliderData';
+import './home.css';
 
 const Home = () => {
     return (
-        <div>
-            <Banner slides={ImageData} bgclr={"#000"} />
+        <div className='mainDiv'>
+            <Banner slides={ImageData} />
+            <PrintableMerchSec />
             <Header />
 
         </div>

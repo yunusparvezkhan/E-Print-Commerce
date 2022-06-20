@@ -22,5 +22,16 @@ export const ImageData = [
     {
         image: "https://images.pexels.com/photos/8106782/pexels-photo-8106782.jpeg?cs=srgb&dl=pexels-karolina-grabowska-8106782.jpg&fm=jpg",
         bgclor: "#808080"
+    },
+    // {
+    //     image: "https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/286566568_1700205700322260_1966517406893881830_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=ep1slP_WTu8AX-m9MS0&tn=rH8nBHDo90muqKJm&_nc_ht=scontent.fccu3-1.fna&oh=00_AT-af7ndXkZeZ7tGc7LUjW2X8It9ZB8OVmWmEORP6grAiw&oe=62A4C783",
+    //     bgclor: "#C9DBDB"
+    // }
+
+]
+
+export const slideTime = [
+    {
+        ms: "5000"
     }
 ]

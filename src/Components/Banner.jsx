@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { ArrowForwardRounded } from '@mui/icons-material';
-import { ImageData } from "./ImageData";
+import { ImageData, slideTime } from "./SliderData";
 import "./Banner.css"
 
 const Container = styled.div`
     width: 100%;
     height: 40vh;
-    position : absolute;
-    top:0;
-    left:0;
+    position: relative;
+    top:0px;
 `
 
 const ImageContainer = styled.div`
@@ -42,10 +41,9 @@ const Arrow = styled.div`
 `
 
 
-const Banner = ({ slides, bgclr }) => {
+const Banner = ({ slides }) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
-    const bgcolor = slides.bgclor;
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -54,6 +52,17 @@ const Banner = ({ slides, bgclr }) => {
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
+
+
+
+    slideTime.map((slidetime) => {
+        return (
+            setTimeout(() => {
+                nextSlide();
+            }, slidetime.ms)
+        )
+    })
+
 
 
 
@@ -68,13 +77,15 @@ const Banner = ({ slides, bgclr }) => {
                                     <img src={slide.image} alt="fashion image" style={{ width: "100%", height: "40vh", objectFit: "contain" }} />
                                 </div>
                             )}
-
                         </div>
                     )
                 })}
             </ImageContainer>
 
             <BannerDarker />
+
+
+
             <Arrow direction="left" onClick={prevSlide} >
                 <ArrowForwardRounded style={{ transform: "rotate(180deg)" }} />
             </Arrow>
@@ -83,6 +94,13 @@ const Banner = ({ slides, bgclr }) => {
             </Arrow>
         </Container>
     )
+
+
+
+
+
+
 }
 
 export default Banner;
+

@@ -8,12 +8,11 @@ import { Badge } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const HeaderDiv = styled.div`
+    display: block;
     position: fixed;
     width: 100%;
     top:0;
-    left:0;
-    background-color : transparent;
-
+    background-color : #00000000;
 `
 
 const Container = styled.div`
