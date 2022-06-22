@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { FirstCard, SecondCard, ThirdCard, FourthCard, FifthCard, SixthCard } from './PrintableMerchSecData';
+import "./PrintableMerchSec.css";
 
 const Container = styled.div`
     width:80%;
@@ -59,10 +61,18 @@ const SecondCatLine = styled.div`
 `
 
 const Card = styled.div`
+    display: block;
     flex: 1;
     height: 200px;
     background-color: #000;
     margin: 30px;
+    cursor: pointer;
+`
+
+const CardImg = styled.img`
+    width: 100%;
+    height:100%;
+    object-fit: cover;
 `
 
 const MoreBtn = styled.button`
@@ -86,22 +96,43 @@ const MoreBtn = styled.button`
 
 
 const PrintableMerchSec = () => {
+
+
+    // CategoryData.map((CategoryData) => {
+    //     const bgimage = CategoryData.image;
+    //     const bgtext = CategoryData.title;
+    // }
+    // )
+
     return (
-        <Container>
+        < Container >
             <Title>Printable Merch</Title>
             <Subtitle>Choose your desired category for printing</Subtitle>
             <FirstCatLine>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card>
+                    <CardImg src={FirstCard.image} />
+                    {/* <div className='BgDarker' /> */}
+                </Card>
+                <Card>
+                    <CardImg src={SecondCard.image} />
+                </Card>
+                <Card>
+                    <CardImg src={ThirdCard.image} />
+                </Card>
             </FirstCatLine>
             <SecondCatLine>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card>
+                    <CardImg src={FourthCard.image} />
+                </Card>
+                <Card>
+                    <CardImg src={FifthCard.image} />
+                </Card>
+                <Card>
+                    <CardImg src={SixthCard.image} />
+                </Card>
             </SecondCatLine>
             <MoreBtn>More</MoreBtn>
-        </Container>
+        </Container >
     )
 }
 
