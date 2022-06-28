@@ -42,56 +42,31 @@ const Subtitle = styled.label`
 `
 
 const FirstCatLine = styled.div`
-    display: flex;
     position:absolute;
     width: 100%;
     height:auto;
     top:150px;
     min-height: 50px;
-    border:2px solid green;
 `
 const SecondCatLine = styled.div`
-    display: flex;
     position:absolute;
     width: 100%;
     height:auto;
     top:410px;
     min-height: 50px;
-    border:2px solid green;
 `
 
 const Card = styled.div`
     display: block;
-    flex: 1;
-    height: 200px;
-    background-color: #000;
-    margin: 30px;
-    cursor: pointer;
-`
-
-const CardImg = styled.img`
-    width: 100%;
-    height:100%;
-    object-fit: cover;
-`
-
-const MoreBtn = styled.button`
-    width: 150px;
-    height: 40px;
     position: absolute;
-    top: 700px;
-    left: 50%;
     transform: translate(-50%,0);
-    font-size:  18px;
-    font-family: 'roboto';
-    text-align: center;
-    justify-content: center;
-    background-color: #654996;
-    border-radius: 10px;
-    border: none;
-    color:#fff;
+    height: 200px;
+    width: 30%;
+    max-width: 300px;
+    background-color: #000;
     cursor: pointer;
 `
+
 
 
 
@@ -109,29 +84,60 @@ const PrintableMerchSec = () => {
             <Title>Printable Merch</Title>
             <Subtitle>Choose your desired category for printing</Subtitle>
             <FirstCatLine>
-                <Card>
-                    <CardImg src={FirstCard.image} />
-                    {/* <div className='BgDarker' /> */}
-                </Card>
-                <Card>
-                    <CardImg src={SecondCard.image} />
-                </Card>
-                <Card>
-                    <CardImg src={ThirdCard.image} />
-                </Card>
+                <a href={FirstCard.href}>
+                    <Card className='FirstCard'>
+                        <img className='CardImg' src={FirstCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{FirstCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
+                <a href={SecondCard.href}>
+                    <Card className='SecondCard'>
+                        <img className='CardImg' src={SecondCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{SecondCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
+                <a href={ThirdCard.href}>
+                    <Card className='ThirdCard'>
+                        <img className='CardImg' src={ThirdCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{ThirdCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
             </FirstCatLine>
             <SecondCatLine>
-                <Card>
-                    <CardImg src={FourthCard.image} />
-                </Card>
-                <Card>
-                    <CardImg src={FifthCard.image} />
-                </Card>
-                <Card>
-                    <CardImg src={SixthCard.image} />
-                </Card>
+                <a href={FourthCard.href}>
+                    <Card className='FirstCard'>
+                        <img className='CardImg' src={FourthCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{FourthCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
+                <a href={FifthCard.href}>
+                    <Card className='SecondCard'>
+                        <img className='CardImg' src={FifthCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{FifthCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
+                <a href={SixthCard.href}>
+                    <Card className='ThirdCard'>
+                        <img className='CardImg' src={SixthCard.image} />
+                        <div className="CardImgDarker">
+                            <label className='CardTitle' >{SixthCard.title}</label>
+                        </div>
+                    </Card>
+                </a>
             </SecondCatLine>
-            <MoreBtn>More</MoreBtn>
+            <a>
+                <button className="MoreBtn">More</button>
+            </a>
         </Container >
     )
 }
