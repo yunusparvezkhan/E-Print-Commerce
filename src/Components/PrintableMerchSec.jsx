@@ -9,7 +9,6 @@ const Container = styled.div`
     border: 1px solid #000;
     height: auto;
     position: relative;
-    display: flex;
     top:0px;
     left:50%;
     transform:translate(-50%,0);
@@ -72,12 +71,6 @@ const Card = styled.div`
 
 const PrintableMerchSec = () => {
 
-
-    // CategoryData.map((CategoryData) => {
-    //     const bgimage = CategoryData.image;
-    //     const bgtext = CategoryData.title;
-    // }
-    // )
 
     return (
         < Container >

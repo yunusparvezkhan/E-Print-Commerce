@@ -1,0 +1,55 @@
+.body {
+    position: relative;
+    top: 850px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    max-width: 1200px;
+    height: 700px;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    font-family: 'Roboto-slab';
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #3e3e3e;
+}
+
+.dropdown-btn {
+    width: 140px;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid #2e2e2e;
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'roboto';
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.ScrollSec {
+    width: auto;
+    max-width: 1200px;
+    height: 400px;
+    background-color: #999999;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 30px;
+    overflow-x: inherit;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.Card {
+    display: inline-block;
+    width: 250px;
+    height: 400px;
+    background-color: pink;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}

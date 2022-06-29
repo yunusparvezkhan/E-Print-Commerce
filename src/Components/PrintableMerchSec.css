@@ -34,7 +34,7 @@
     width: 100%;
     height: 100%;
     background-color: #00000060;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0%;
 }
 
@@ -59,7 +59,7 @@
     width: 150px;
     height: 40px;
     position: absolute;
-    top: 700px;
+    top: 660px;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 18px;
