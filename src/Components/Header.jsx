@@ -11,8 +11,9 @@ const HeaderDiv = styled.div`
     display: block;
     position: fixed;
     width: 100%;
+    height:60px;
     top:0;
-    background-color : #00000000;
+    background-color :#3E3E3E;
 `
 
 const Container = styled.div`

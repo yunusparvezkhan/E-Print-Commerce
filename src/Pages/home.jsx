@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header';
 import Banner from '../Components/Banner';
-import { ImageData } from '../Components/SliderData';
+import { ImageData } from '../Components/BannerData';
 import PrintableMerchSec from '../Components/PrintableMerchSec';
 import ReadymadeSec from '../Components/ReadymadesSec';
 import './home.css';

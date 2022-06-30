@@ -6,10 +6,9 @@ import "./PrintableMerchSec.css";
 const Container = styled.div`
     width:80%;
     max-width: 1200px;
-    border: 1px solid #000;
     height: auto;
     position: relative;
-    top:0px;
+    top:60px;
     left:50%;
     transform:translate(-50%,0);
     justify-content: center;

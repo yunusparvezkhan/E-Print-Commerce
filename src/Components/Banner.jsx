@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { ArrowForwardRounded } from '@mui/icons-material';
-import { ImageData, slideTime } from "./SliderData";
+import { ImageData, slideTime } from "./BannerData";
 import "./Banner.css"
 
 const Container = styled.div`
     width: 100%;
     height: 40vh;
     position: relative;
-    top:0px;
+    top:60px;
+    cursor: pointer;
 `
 
 const ImageContainer = styled.div`
@@ -82,16 +83,12 @@ const Banner = ({ slides }) => {
                 })}
             </ImageContainer>
 
-            <BannerDarker />
-
-
-
-            <Arrow direction="left" onClick={prevSlide} >
+            {/* <Arrow direction="left" onClick={prevSlide} >
                 <ArrowForwardRounded style={{ transform: "rotate(180deg)" }} />
             </Arrow>
             <Arrow direction="right" onClick={nextSlide} >
                 <ArrowForwardRounded />
-            </Arrow>
+            </Arrow> */}
         </Container>
     )
 
