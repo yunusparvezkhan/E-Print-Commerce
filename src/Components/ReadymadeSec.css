@@ -1,12 +1,18 @@
 .body {
     position: relative;
-    top: 910px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 80%;
     max-width: 1200px;
-    height: 700px;
+    height: 620px;
     text-align: center;
+}
+
+.OuterBody {
+    position: relative;
+    top: 910px;
+    background-color: #eee;
 }
 
 .title {
@@ -30,26 +36,61 @@
     letter-spacing: 1px;
 }
 
-.ScrollSec {
-    width: auto;
-    max-width: 1200px;
-    height: 400px;
-    background-color: #999999;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    margin-top: 30px;
-    overflow-x: inherit;
-    overflow-y: hidden;
-    white-space: nowrap;
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+body {
+    font-family: 'Roboto', serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
 
-.Card {
-    display: inline-block;
-    width: 250px;
-    height: 400px;
-    background-color: pink;
-    margin-left: 20px;
-    margin-right: 20px;
-    position: relative;
+.swiper {
+    width: 100%;
+    height: 370px;
+    margin-top: 30px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+.swiper-slide label {
+    font-size: 14px;
+    position: absolute;
+    top: 313px;
+}
+
+.swiper-slide h3 {
+    font-size: 18px;
+    position: absolute;
+    top: 338px;
 }
