@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./ReadymadeSec.css";
-import { Categories } from './ReadymadeSec';
+import { Categories, ReadymadeProductsData } from './ReadymadeSec';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 const ReadymadesSec = () => {
+
     return (
         <div className="OuterBody">
             <div className='body'>
@@ -31,7 +32,7 @@ const ReadymadesSec = () => {
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={30}
-                    slidesPerGroup={4}
+                    slidesPerGroup={1}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     pagination={{
@@ -41,60 +42,18 @@ const ReadymadesSec = () => {
                     modules={[Pagination, Navigation]}
                     className="slider"
                 >
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/3483967/pexels-photo-3483967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Mat Black Tall Mug</label>
-                        <h3>₹399.00</h3>
-                    </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8543394/pexels-photo-8543394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Sky Blue Half Sleev Volunteer T Shirt</label>
-                        <h3>₹449.00</h3>
-                    </SwiperSlide>
 
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/1207918/pexels-photo-1207918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Metalic 150mL Mug White</label>
-                        <h3>₹149.00</h3>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <img src="https://images.pexels.com/photos/8758429/pexels-photo-8758429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                        <label>Artistic Dupatta</label>
-                        <h3>₹329.00</h3>
-                    </SwiperSlide>
-
+                    {ReadymadeProductsData.map((slide, index) => {
+                        return (
+                            <SwiperSlide key={index}>
+                                <img src={slide.src} alt={slide.alt} />
+                                <label>{slide.title}</label>
+                                <h3>₹{slide.rupees}.{slide.paisa}</h3>
+                            </SwiperSlide>
+                        )
+                    })}
                 </Swiper>
 
 
