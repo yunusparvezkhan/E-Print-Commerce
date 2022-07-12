@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import "./ReadymadeSec.css";
 import { Categories, ReadymadeProductsData } from './ReadymadeSec';
 // Import Swiper React components

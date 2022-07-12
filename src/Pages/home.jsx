@@ -4,6 +4,7 @@ import Banner from '../Components/Banner';
 import { ImageData } from '../Components/BannerData';
 import PrintableMerchSec from '../Components/PrintableMerchSec';
 import ReadymadeSec from '../Components/ReadymadesSec';
+import FeaturedProductsSec from '../Components/FeaturedProductsSec';
 import './home.css';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner slides={ImageData} />
             <PrintableMerchSec />
             <ReadymadeSec />
+            <FeaturedProductsSec />
             <Header />
 
         </div>
