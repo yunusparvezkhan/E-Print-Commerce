@@ -1,11 +1,12 @@
 .body {
     position: relative;
-    top: 30px;
+    top: 00px;
+    padding-top: 30px;
+    padding-bottom: 70px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 80%;
     max-width: 1200px;
-    height: 620px;
     text-align: center;
 }
 
@@ -13,6 +14,7 @@
     position: relative;
     top: 910px;
     background-color: #eee;
+    height: auto;
 }
 
 .title {
