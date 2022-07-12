@@ -1,5 +1,4 @@
 .FPS-container {
-    background-color: #eeeeff;
     display: block;
     position: relative;
     top: 910px;
@@ -11,7 +10,7 @@
     text-align: center;
 }
 
-.title {
+.fps-title {
     font-size: 36px;
     font-family: 'roboto slab', sans-serif;
     font-weight: 400;
@@ -21,7 +20,7 @@
     padding-bottom: 5px;
 }
 
-.subtitle {
+.fps-subtitle {
     font-size: 14px;
     font-family: 'roboto slab', sans-serif;
     font-weight: 400;
@@ -37,7 +36,7 @@
 
 .swiper {
     width: 100%;
-    height: 370px;
+    height: 400px;
     margin-top: 30px;
 }
 
@@ -64,7 +63,7 @@
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 330px;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -73,11 +72,11 @@
 .swiper-slide label {
     font-size: 14px;
     position: absolute;
-    top: 313px;
+    top: 343px;
 }
 
 .swiper-slide h3 {
     font-size: 18px;
     position: absolute;
-    top: 338px;
+    top: 368px;
 }

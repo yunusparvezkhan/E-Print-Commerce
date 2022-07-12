@@ -17,7 +17,7 @@
     height: auto;
 }
 
-.title {
+.rms-title {
     font-size: 36px;
     font-family: 'Roboto-slab';
     font-weight: 400;
@@ -52,7 +52,7 @@ body {
 
 .swiper {
     width: 100%;
-    height: 370px;
+    height: 400px;
     margin-top: 30px;
 }
 
@@ -79,7 +79,7 @@ body {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 330px;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -88,11 +88,11 @@ body {
 .swiper-slide label {
     font-size: 14px;
     position: absolute;
-    top: 313px;
+    top: 343px;
 }
 
 .swiper-slide h3 {
     font-size: 18px;
     position: absolute;
-    top: 338px;
+    top: 368px;
 }

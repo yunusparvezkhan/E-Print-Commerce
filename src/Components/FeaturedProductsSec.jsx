@@ -15,8 +15,8 @@ import { Pagination, Navigation } from "swiper";
 const FeaturedProductsSec = () => {
     return (
         <div className='FPS-container'>
-            <h1 className="title" >Featured Products</h1>
-            <label className='subtitle'>Sold most in the last week</label>
+            <h1 className="fps-title" >Featured Products</h1>
+            <label className='fps-subtitle'>Sold most in the last week</label>
 
 
             <Swiper

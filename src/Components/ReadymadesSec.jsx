@@ -17,7 +17,7 @@ const ReadymadesSec = () => {
     return (
         <div className="OuterBody">
             <div className='body'>
-                <h1 className='title'>Our Readymades</h1>
+                <h1 className='rms-title'>Our Readymades</h1>
                 <select className='dropdown-btn'>
                     <option value="">Select Category</option>
                     <option value={Categories.first}>{Categories.first}</option>
