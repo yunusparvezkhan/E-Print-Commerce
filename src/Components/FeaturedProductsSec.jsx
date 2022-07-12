@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeaturedProductsSec.css"
+import { FeaturedProductsData } from "./FeaturedProductsData";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,29 +34,16 @@ const FeaturedProductsSec = () => {
                 className="slider"
             >
 
-                <SwiperSlide>
-                    <img src="https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="" />
-                    <label>250mL Coffee Mug</label>
-                    <h3>₹239.00</h3>
-                </SwiperSlide>
 
-                <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/12395768/pexels-photo-12395768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <label>Printable White Tee Shirt for Couples</label>
-                    <h3>₹799.00</h3>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <label>Prinatable White Tee Shirt</label>
-                    <h3>₹399.00</h3>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <img src="https://images.pexels.com/photos/1214205/pexels-photo-1214205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                    <label>Basic Photo Frame</label>
-                    <h3>₹169.00</h3>
-                </SwiperSlide>
+                {FeaturedProductsData.map((slide, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <img src={slide.src} alt={slide.alt} />
+                            <label>{slide.title}</label>
+                            <h3>₹{slide.rupees}.{slide.paisa}</h3>
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
 
 
