@@ -5,6 +5,7 @@ import { ImageData } from '../Components/BannerData';
 import PrintableMerchSec from '../Components/PrintableMerchSec';
 import ReadymadeSec from '../Components/ReadymadesSec';
 import FeaturedProductsSec from '../Components/FeaturedProductsSec';
+import ContactSec from '../Components/ContactSec';
 import './home.css';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <PrintableMerchSec />
             <ReadymadeSec />
             <FeaturedProductsSec />
+            <ContactSec />
             <Header />
 
         </div>

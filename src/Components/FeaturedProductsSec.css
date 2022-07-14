@@ -6,7 +6,8 @@
     transform: translate(-50%, 0);
     width: 80%;
     max-width: 1200px;
-    height: 700px;
+    height: auto;
+    padding-bottom: 100px;
     text-align: center;
 }
 
