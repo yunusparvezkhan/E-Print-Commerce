@@ -9,13 +9,73 @@
     background-color: #101010;
 }
 
-.Con-Container img {
-    display: block;
+.cs-img {
+    display: inline-block;
     object-fit: cover;
     width: 50%;
     height: 100vh;
     max-height: 1000px;
-    min-height: 650px;
+    min-height: 800px;
     position: relative;
     left: 0;
+}
+
+.cs-textbox {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 55%;
+    top: 15vh;
+    background-color: transparent;
+}
+
+.cs-text {
+    font-family: 'Cabin Sketch', cursive;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.cs-text-a {
+    font-size: 70px;
+}
+
+.cs-text-b {
+    font-size: 116px;
+}
+
+.cs-text-c {
+    font-size: 96px;
+}
+
+.cs-text-d {
+    font-size: 52px;
+}
+
+.cs-text-e {
+    font-size: 119px;
+}
+
+.cs-contact-btn {
+    display: block;
+    width: 220px;
+    height: 60px;
+    position: absolute;
+    top: 700px;
+    left: 55%;
+    background-color: #7147BB;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 26px;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.cs-contact-btn:hover {
+    background-color: #5A359A;
+    letter-spacing: 3px;
 }
