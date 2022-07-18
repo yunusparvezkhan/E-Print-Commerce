@@ -81,3 +81,34 @@
     position: absolute;
     top: 368px;
 }
+
+.fps-add-to-cart-button {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.fps-add-to-cart-button:hover {
+    width: 100%;
+    background-color: #ffffffaa;
+    opacity: 100%;
+}
+
+.fps-add-to-cart-icon {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto Slab', sans-serif;
+    letter-spacing: 1px;
+    color: #000000;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}

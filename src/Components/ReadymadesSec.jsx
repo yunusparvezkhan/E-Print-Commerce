@@ -1,6 +1,7 @@
 import React from "react";
 import "./ReadymadeSec.css";
 import { Categories, ReadymadeProductsData } from './ReadymadeSec';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -51,6 +52,12 @@ const ReadymadesSec = () => {
                                 <img src={slide.src} alt={slide.alt} />
                                 <label>{slide.title}</label>
                                 <h3>₹{slide.rupees}.{slide.paisa}</h3>
+                                <div className="rms-add-to-cart-button" >
+                                    <div className="rms-add-to-cart-icon">
+                                        <AddShoppingCartIcon />
+                                        <p>Add To Cart</p>
+                                    </div>
+                                </div>
                             </SwiperSlide>
                         )
                     })}

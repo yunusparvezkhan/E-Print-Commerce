@@ -1,6 +1,8 @@
 import React from "react";
 import "./FeaturedProductsSec.css"
 import { FeaturedProductsData } from "./FeaturedProductsData";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,6 +43,12 @@ const FeaturedProductsSec = () => {
                             <img src={slide.src} alt={slide.alt} />
                             <label>{slide.title}</label>
                             <h3>₹{slide.rupees}.{slide.paisa}</h3>
+                            <div className="fps-add-to-cart-button" >
+                                <div className="fps-add-to-cart-icon">
+                                    <AddShoppingCartIcon />
+                                    <p>Add To Cart</p>
+                                </div>
+                            </div>
                         </SwiperSlide>
                     )
                 })}
