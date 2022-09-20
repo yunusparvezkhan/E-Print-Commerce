@@ -23,7 +23,7 @@ export const Product_list_Data = [
         rupees: "369",
         paisa: "00",
         alt: "",
-        category: "mugs"
+        category: "lockets"
     },
 
     {
@@ -32,6 +32,6 @@ export const Product_list_Data = [
         rupees: "139",
         paisa: "00",
         alt: "",
-        category: "mugs"
+        category: "book covers"
     },
 ]

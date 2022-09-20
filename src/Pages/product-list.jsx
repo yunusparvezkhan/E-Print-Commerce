@@ -3,7 +3,49 @@ import Header from '../Components/Header';
 import { Product_list_Data } from './Data/product-list-data';
 import "./styles/product-list.css";
 
+
+
+const FormData = () => {
+    const category1 = document.getElementById("category1").checked;
+    const category2 = document.getElementById("category2").checked;
+    const category3 = document.getElementById("category3").checked;
+    const category4 = document.getElementById("category4").checked;
+    const category5 = document.getElementById("category5").checked;
+    const category6 = document.getElementById("category6").checked;
+
+    const checkedCategories = [];
+
+    if (category1 === true) {
+        checkedCategories.push("cat1")
+    }
+
+    if (category2 === true) {
+        checkedCategories.push("cat2")
+    }
+
+    if (category3 === true) {
+        checkedCategories.push("cat3")
+    }
+
+    if (category4 === true) {
+        checkedCategories.push("cat4")
+    }
+
+    if (category5 === true) {
+        checkedCategories.push("cat5")
+    }
+
+    if (category6 === true) {
+        checkedCategories.push("cat6")
+    }
+
+    console.log("program is running")
+    console.log(checkedCategories)
+}
+
 const Product_list = () => {
+
+
     return (
         <div className="pl-body">
             <Header className="pl-header" />
@@ -19,19 +61,21 @@ const Product_list = () => {
             </div>
             <div className='pl-categories-sec'>
                 <h3>Product Type</h3>
-                <form action="">
-                    <input type="checkbox" /> <span>Tee Shirts</span> <br />
-                    <input type="checkbox" /> <span>Mugs</span> <br />
-                    <input type="checkbox" /> <span>Phone Back Covers</span> <br />
-                    <input type="checkbox" /> <span>Book Covers</span> <br />
-                    <input type="checkbox" /> <span>Lockets</span> <br />
-                    <input type="checkbox" /> <span>Rotating Lamps</span> <br />
-                </form>
+                <input type="checkbox" id="category1" /> <span>Tee Shirts</span> <br />
+                <input type="checkbox" id="category2" /> <span>Mugs</span> <br />
+                <input type="checkbox" id="category3" /> <span>Phone Back Covers</span> <br />
+                <input type="checkbox" id="category4" /> <span>Book Covers</span> <br />
+                <input type="checkbox" id="category5" /> <span>Lockets</span> <br />
+                <input type="checkbox" id="category6" /> <span>Rotating Lamps</span> <br />
+                <button onClick={FormData} >submit</button>
             </div>
             <div className='pl-search-result-sec'>
 
                 {
                     Product_list_Data.map((product) => {
+                        // if (product.category == ) {
+
+                        // }
                         return (
                             <div className='pl-search-result-card'>
                                 <img src={product.src} alt={product.alt} />
@@ -43,6 +87,9 @@ const Product_list = () => {
                     )
                 }
 
+
+            </div>
+            <div>
 
             </div>
         </div>
