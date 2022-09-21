@@ -73,9 +73,6 @@ const Product_list = () => {
 
                 {
                     Product_list_Data.map((product) => {
-                        // if (product.category == ) {
-
-                        // }
                         return (
                             <div className='pl-search-result-card'>
                                 <img src={product.src} alt={product.alt} />
