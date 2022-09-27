@@ -49,7 +49,7 @@ const ReadymadesSec = () => {
                     {ReadymadeProductsData.map((slide, index) => {
                         return (
                             <SwiperSlide key={index}>
-                                <img src={slide.src} alt={slide.alt} />
+                                <img src={slide.src} alt={slide.alt} className="slider-img" />
                                 <label>{slide.title}</label>
                                 <h3>₹{slide.rupees}.{slide.paisa}</h3>
                                 <div className="rms-add-to-cart-button" >

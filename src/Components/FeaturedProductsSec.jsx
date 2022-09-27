@@ -39,8 +39,8 @@ const FeaturedProductsSec = () => {
 
                 {FeaturedProductsData.map((slide, index) => {
                     return (
-                        <SwiperSlide key={index}>
-                            <img src={slide.src} alt={slide.alt} />
+                        <SwiperSlide className="sliderr" key={index}>
+                            <img src={slide.src} alt={slide.alt} className="slider-img" />
                             <label>{slide.title}</label>
                             <h3>₹{slide.rupees}.{slide.paisa}</h3>
                             <div className="fps-add-to-cart-button" >
