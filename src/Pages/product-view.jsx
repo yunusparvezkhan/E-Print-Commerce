@@ -50,13 +50,17 @@ const Product_View = () => {
                     >
 
 
-                        {Product_Sizes.at(chosencolor).images.map((slide, index) => {
-                            return (
-                                <SwiperSlide key={index}>
-                                    <img src={slide} alt={slide} id="product-prev-img" />
-                                </SwiperSlide>
+                        {
+                            // Product_Sizes.at(chosensize).images.map((slide, index) => {
+                            Product_Sizes.at(chosensize).colors.at(chosencolor).images.map((slide, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <img src={slide} alt={slide} id="product-prev-img" />
+                                    </SwiperSlide>
+                                )
+                            }
                             )
-                        })}
+                        }
                     </Swiper>
 
 
@@ -73,7 +77,7 @@ const Product_View = () => {
 
                         <label className='pv-price-text'>Price</label>
                         <h2 className='pv-price'>₹{
-                            Product_Sizes.at(chosensize).prices.at(chosencolor)
+                            Product_Sizes.at(chosensize).colors.at(chosencolor).price
                         }
                         </h2>
                         <label className='pv-price-subtext'>Including GST</label> <br />
@@ -81,9 +85,9 @@ const Product_View = () => {
 
                         <label className='pv-color-text'>Colour</label>
                         {
-                            Product_Sizes.at(chosensize).colors.map((color) => {
+                            Product_Sizes.at(chosensize).colors.map((colors) => {
                                 return (
-                                    <button className='color-button'>{color}</button>
+                                    <button className='color-button'>{colors.color}</button>
                                 )
                             })
                         }
