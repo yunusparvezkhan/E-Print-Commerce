@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Header from '../Components/Header'
 import { Product_Data, Product_Sizes } from './Data/product-data'
 
@@ -24,10 +24,9 @@ import "./styles/product-view.css"
 
 const Product_View = () => {
 
-    let chosencolor = 1;
-    let chosensize = 1;
-    chosencolor = 0;
-    chosensize = 0;
+    const [chosencolor, setChosencolor] = useState(0);
+    const [chosensize, setChosensize] = useState(0);
+
 
     return (
         <div className='pv-container'>
@@ -85,9 +84,12 @@ const Product_View = () => {
 
                         <label className='pv-color-text'>Colour</label>
                         {
-                            Product_Sizes.at(chosensize).colors.map((colors) => {
+                            Product_Sizes.at(chosensize).colors.map((xyz, colorindex) => {
+                                let colorChangeFunc = () => {
+                                    setChosencolor(colorindex);
+                                }
                                 return (
-                                    <button className='color-button'>{colors.color}</button>
+                                    <button className='color-button' onClick={colorChangeFunc}>{xyz.color}</button>
                                 )
                             })
                         }
@@ -96,11 +98,7 @@ const Product_View = () => {
                     {
                         Product_Sizes.map((sizes, index) => {
                             let sizeChangeFunc = () => {
-                                chosensize = index;
-                                console.log(chosensize);
-                                // let subCont = document.getElementById("pv-details-sub-container");
-                                // window.subCont.reload();
-                                // subCont.fetchData()
+                                setChosensize(index);
                             }
                             return (
                                 <button className='size-button' onClick={sizeChangeFunc} >{sizes.size}</button>

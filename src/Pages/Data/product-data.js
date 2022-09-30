@@ -39,7 +39,7 @@ export const Product_Sizes = [
         colors: [
             {
                 color: 'red',
-                price: 200,
+                price: 100,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
@@ -87,7 +87,7 @@ export const Product_Sizes = [
         colors: [
             {
                 color: 'red',
-                price: 100,
+                price: 200,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
@@ -115,13 +115,6 @@ export const Product_Sizes = [
             },
             {
                 color: 'sky blue',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'army green',
                 price: 100,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
@@ -135,7 +128,7 @@ export const Product_Sizes = [
         colors: [
             {
                 color: 'red',
-                price: 100,
+                price: 300,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
@@ -156,20 +149,6 @@ export const Product_Sizes = [
             },
             {
                 color: 'white',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'sky blue',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'army green',
                 price: 100,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
@@ -183,42 +162,21 @@ export const Product_Sizes = [
         colors: [
             {
                 color: 'red',
-                price: 100,
+                price: 400,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
             },
             {
                 color: 'blue',
-                price: 100,
+                price: 4000,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
             },
             {
                 color: 'black',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'white',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'sky blue',
-                price: 100,
-                images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
-                    "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
-                ]
-            },
-            {
-                color: 'army green',
-                price: 100,
+                price: 40000,
                 images: ["https://i.pinimg.com/originals/a3/ac/1e/a3ac1ed5abaedffd9947face7901e14c.jpg",
                     "https://www.industrialempathy.com/img/remote/ZiClJf-640w.avif"
                 ]
