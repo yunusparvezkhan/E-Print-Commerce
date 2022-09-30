@@ -105,6 +105,12 @@ const Product_View = () => {
                             )
                         })
                     }
+                    <br />
+                    <span>
+                        {
+                            Product_Sizes.at(chosensize).colors.at(chosencolor).spann
+                        }
+                    </span>
 
 
                 </div>
