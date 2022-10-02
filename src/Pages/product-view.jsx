@@ -98,7 +98,12 @@ const Product_View = () => {
                     {
                         Product_Sizes.map((sizes, index) => {
                             let sizeChangeFunc = () => {
-                                setChosensize(index);
+                                if (chosencolor < sizes.colors.length) {
+                                    setChosensize(index);
+                                } else {
+                                    setChosencolor(0);
+                                    setChosensize(index);
+                                }
                             }
                             return (
                                 <button className='size-button' onClick={sizeChangeFunc} >{sizes.size}</button>
