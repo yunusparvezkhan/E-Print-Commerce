@@ -13,6 +13,30 @@ export const Product_Data = {
         {
             question: "q2",
             answer: "a2"
+        },
+        {
+            question: "q3",
+            answer: "a3"
+        },
+        {
+            question: "q4",
+            answer: "a4"
+        },
+        {
+            question: "q5",
+            answer: "a5"
+        },
+        {
+            question: "q6",
+            answer: "a6"
+        },
+        {
+            question: "q7",
+            answer: "a7"
+        },
+        {
+            question: "q8",
+            answer: "a8"
         }
     ],
     reviews: [

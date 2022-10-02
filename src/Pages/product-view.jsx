@@ -26,10 +26,13 @@ const Product_View = () => {
 
     const [chosencolor, setChosencolor] = useState(0);
     const [chosensize, setChosensize] = useState(0);
+    const [pvqnanums, setPvqnanums] = useState(3);
 
 
     return (
         <div className='pv-container'>
+
+            {/* Product Display Section (image, title, price etc) */}
             <div className='pv-display-sec'>
                 <div className='pv-image-container'>
 
@@ -116,12 +119,41 @@ const Product_View = () => {
                             Product_Sizes.at(chosensize).colors.at(chosencolor).spann
                         }
                     </span>
-
-
                 </div>
             </div>
+
+
+            {/* Description Section */}
+
+            <div className='pv-despription-sec'>
+                <h2 className='pv-despriction-title' >Description</h2>
+                <p className='pv-description-body'>{Product_Data.description}</p>
+            </div>
+
+
+            {/* Question and Answer section */}
+
+            <div className='pv-qna-sec'>
+                <h2>Questions & Answers</h2>
+                {
+                    Product_Data.qna.map((qnaset, index) => {
+                        if (index <= pvqnanums - 1) {
+                            return (
+                                <div>
+                                    <h3 className='pv-qna-question'>{qnaset.question}</h3>
+                                    <p className='pv-qna-answer'>{qnaset.answer}</p>
+                                </div>
+                            )
+                        }
+                    })
+                }
+                <button onClick={() => setPvqnanums(pvqnanums + 5)}></button>
+
+            </div>
+
+
             <Header />
-        </div>
+        </div >
     )
 }
 
