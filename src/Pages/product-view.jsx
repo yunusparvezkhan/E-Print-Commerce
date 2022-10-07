@@ -150,6 +150,10 @@ const Product_View = () => {
                 <button onClick={() => setPvqnanums(pvqnanums + 5)}></button>
 
             </div>
+            <div className='pv-review-sec'>
+                <h2>Reviews</h2>
+
+            </div>
 
 
             <Header />
@@ -158,5 +162,3 @@ const Product_View = () => {
 }
 
 export default Product_View;
-
-// comment for git connection check
