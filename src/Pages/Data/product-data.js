@@ -41,13 +41,15 @@ export const Product_Data = {
     ],
     reviews: [
         {
-            stars: 3,
+            stars: 4,
+            star: [1, 1, 1],
             images: ['a', 'b', 'c', 'd', 'e', 'f'],
             headline: "headline",
             reviewBody: "this is a cool review"
         },
         {
             stars: 3,
+            star: [1, 1, 1, 1],
             images: ['a', 'b', 'c', 'd', 'e', 'f'],
             headline: "headline",
             reviewBody: "this is a cool review"

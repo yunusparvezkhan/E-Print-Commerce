@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header'
 import { Product_Data, Product_Sizes } from './Data/product-data'
-
+import StarIcon from '@mui/icons-material/Star';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,6 +17,7 @@ import { Pagination, Navigation } from "swiper";
 
 
 import "./styles/product-view.css"
+import { render } from 'react-dom';
 
 
 
@@ -154,8 +156,28 @@ const Product_View = () => {
                 <h2>Reviews</h2>
                 {
                     Product_Data.reviews.map((review, index) => {
+
                         return (
                             <div>
+                                <div>
+                                    {
+                                        review.star.map(() => {
+                                            return (
+                                                <StarIcon />
+                                            )
+                                        })
+                                    }
+                                </div>
+                                <div>
+                                    {
+                                        review.star.map((e, i) => {
+                                            let emptystar = 5 - review.star.length;
+                                            if (i < emptystar) {
+                                                return (<StarOutlineIcon />)
+                                            }
+                                        })
+                                    }
+                                </div>
                                 <h3 className='pv-review-title'>{review.headline}</h3>
                                 <p className='pv-review-body'>{review.reviewBody}</p>
                             </div>
