@@ -152,7 +152,16 @@ const Product_View = () => {
             </div>
             <div className='pv-review-sec'>
                 <h2>Reviews</h2>
-
+                {
+                    Product_Data.reviews.map((review, index) => {
+                        return (
+                            <div>
+                                <h3 className='pv-review-title'>{review.headline}</h3>
+                                <p className='pv-review-body'>{review.reviewBody}</p>
+                            </div>
+                        )
+                    })
+                }
             </div>
 
 
