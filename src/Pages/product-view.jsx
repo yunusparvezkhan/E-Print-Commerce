@@ -155,7 +155,7 @@ const Product_View = () => {
             <div className='pv-review-sec'>
                 <h2>Customer Reviews</h2>
 
-                <h3>Images</h3>
+                <h2>Images</h2>
                 {
                     Product_Data.reviews.map((review) => {
                         // let customerimages = [];
@@ -187,7 +187,7 @@ const Product_View = () => {
                     }
                 </Swiper>
 
-                <h3>Reviews</h3>
+                <h2>Reviews</h2>
                 {
                     Product_Data.reviews.map((review, index) => {
 
