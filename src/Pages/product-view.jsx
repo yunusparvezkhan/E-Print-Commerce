@@ -159,6 +159,7 @@ const Product_View = () => {
 
                         return (
                             <div>
+                                <h3 className='pv-review-title'>{review.headline}</h3>
                                 <div>
                                     {
                                         review.star.map(() => {
@@ -178,7 +179,6 @@ const Product_View = () => {
                                         })
                                     }
                                 </div>
-                                <h3 className='pv-review-title'>{review.headline}</h3>
                                 <p className='pv-review-body'>{review.reviewBody}</p>
                             </div>
                         )
