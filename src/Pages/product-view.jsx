@@ -29,7 +29,7 @@ const Product_View = () => {
     const [chosencolor, setChosencolor] = useState(0);
     const [chosensize, setChosensize] = useState(0);
     const [pvqnanums, setPvqnanums] = useState(3);
-
+    const [customerimages, setCustomerimages] = useState([]);
 
     return (
         <div className='pv-container'>
@@ -153,7 +153,41 @@ const Product_View = () => {
 
             </div>
             <div className='pv-review-sec'>
-                <h2>Reviews</h2>
+                <h2>Customer Reviews</h2>
+
+                <h3>Images</h3>
+                {
+                    Product_Data.reviews.map((review) => {
+                        // let customerimages = [];
+                        review.images.map((image) => {
+                            customerimages.push(image)
+                        })
+                    })
+                }
+                <Swiper
+                    slidesPerView={1}
+                    slidesPerGroup={1}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    id="product-preview"
+                >
+                    {
+                        customerimages.map((image, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <img src={image} alt={image} id="customer-posted-img" />
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
+
+                <h3>Reviews</h3>
                 {
                     Product_Data.reviews.map((review, index) => {
 
@@ -185,8 +219,6 @@ const Product_View = () => {
                     })
                 }
             </div>
-
-
             <Header />
         </div >
     )
