@@ -219,6 +219,9 @@ const Product_View = () => {
                     })
                 }
             </div>
+
+            {/* Footer Needd to be Here */}
+
             <Header />
         </div >
     )
