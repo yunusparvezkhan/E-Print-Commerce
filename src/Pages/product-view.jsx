@@ -149,7 +149,7 @@ const Product_View = () => {
                         }
                     })
                 }
-                <button onClick={() => setPvqnanums(pvqnanums + 5)}></button>
+                <button onClick={() => setPvqnanums(pvqnanums + 5)}>More</button>
 
             </div>
             <div className='pv-review-sec'>
@@ -169,9 +169,7 @@ const Product_View = () => {
                     slidesPerGroup={1}
                     loop={true}
                     loopFillGroupWithBlank={true}
-                    pagination={{
-                        clickable: true,
-                    }}
+                    pagination={false}
                     navigation={true}
                     modules={[Pagination, Navigation]}
                     id="product-preview"

@@ -37,6 +37,14 @@ export const Product_Data = {
         {
             question: "q8",
             answer: "a8"
+        },
+        {
+            question: "q9",
+            answer: "a9"
+        },
+        {
+            question: "q10",
+            answer: "a10"
         }
     ],
     reviews: [
@@ -50,7 +58,7 @@ export const Product_Data = {
         {
             stars: 3,
             star: [1, 1, 1, 1],
-            images: ['a', 'b', 'c', 'd', 'e', 'f'],
+            images: ['1', '2', '3', '4'],
             headline: "headline",
             reviewBody: "this is a cool review"
         }
