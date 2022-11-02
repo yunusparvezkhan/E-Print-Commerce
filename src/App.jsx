@@ -2,13 +2,15 @@ import Home from "./Pages/home";
 import Product_list from "./Pages/product-list";
 import Product_View from "./Pages/product-view";
 import PhotoUploader from "./Pages/PhotoUploader";
+import Cart from "./Pages/cart";
 
 const App = () => {
   return <div>
     {/* <Home /> */}
     {/* <Product_list /> */}
     {/* <Product_View /> */}
-    <PhotoUploader ProductName={"Abc"} />
+    {/* <PhotoUploader ProductName={"Photo Uploader Page"} /> */}
+    <Cart />
   </div>;
 };
 
