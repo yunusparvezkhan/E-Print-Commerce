@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useMemo } from 'react'
 import Header from '../Components/Header'
 import { CartItems, CartProperties } from './Data/cart-data'
 import './styles/cart.css'
 
 const Cart = () => {
-    let subtotal = 0;
+    const subtotal = useMemo(() => {
+    return CartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  }, []);
 
     return (
         <div className='cart-master'>
@@ -12,10 +14,8 @@ const Cart = () => {
 
                 <h1 className='cart-heading'>My Cart</h1>
 
-                <div className='cart-product-list-sec'>
-                    {CartItems.map((item, index) => {
-                        subtotal = subtotal + item.price;
-                        return (
+                <section className='cart-product-list-sec'>
+                {CartItems.map((item) => (
                             <div>
                                 <img src={item.img} alt={item.product_name} />
                                 <h3 className='cart-items-title'>{item.product_name}</h3>
@@ -26,9 +26,8 @@ const Cart = () => {
                                 <label className='cart-subtotal-label'>Subtotal</label>
                                 <span className='cart-subtotal'>{item.price * item.quantity}</span>
                             </div>
-                        )
-                    })}
-                </div>
+                ))}
+                </section>
 
                 <div className='cart-summary-sec'>
                     <h2 className='cart-summary-heading' >Order Summary</h2>
