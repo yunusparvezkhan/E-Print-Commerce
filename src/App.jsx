@@ -6,11 +6,14 @@ import Cart from "./Pages/cart";
 
 const App = () => {
   return <div>
-    {/* <Home /> */}
+
+    {/* Comment and uncomment the below pages to see as output */}
+
+    <Home />
     {/* <Product_list /> */}
     {/* <Product_View /> */}
     {/* <PhotoUploader ProductName={"Photo Uploader Page"} /> */}
-    <Cart />
+    {/* <Cart /> */}
   </div>;
 };
 
