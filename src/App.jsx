@@ -9,11 +9,11 @@ const App = () => {
 
     {/* Comment and uncomment the below pages to see as output */}
 
-    <Home />
+    {/* <Home /> */}
     {/* <Product_list /> */}
     {/* <Product_View /> */}
     {/* <PhotoUploader ProductName={"Photo Uploader Page"} /> */}
-    {/* <Cart /> */}
+    <Cart />
   </div>;
 };
 
